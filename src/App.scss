@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import 'scss/normalize';
+@import 'scss/mixins';
+@import 'scss/variable';
+
+
+body{
+    color: $text-color;    
+    padding-top: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 11px;
+    position: relative;
+    z-index: 1;
+    @include mobile(){
+        padding: 0;
+    }
+}
+
+.avatar{
+    border-radius: 50%;
+    max-width: 100%;
+    margin-bottom: 1.8rem;
+    @include tablet(){
+        width: 40%;  
+        margin-bottom:0;
+    }
+}
+.name{
+    h2{
+        color: #000;
+        margin-bottom: .5rem;
+    }
+    @include mobile(){
+        font-size: 15px;
+    }
+    @include tablet(){
+        font-size: 9px;
+        width: 50%;  
+    }
+    @include desktop(){
+        h2{
+            font-size: 1.5rem;
+        }
+        font-size: .9rem;
+    }
+   
+}
+.icon{
+    width: 30px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+    @include mobile(){
+        flex-direction: row; 
+    }
+    .col{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 0 0 calc(50% - 5px);
+        align-self: center;
+        height: 100%;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        @include mobile(){
+          flex: 1 0 30%;
+          flex-direction: row; 
+       }
+       @include tablet(){
+        flex: 1 0 30%;    
+       }
+
+       
+
+    }
+}
+
+.linkedin-col{
+    @include mobile(){
+        font-size: 16px;
+    }
+    @include tablet(){
+        font-size: 12px;
+    }
+    @include desktop(){
+        font-size: 1rem;
+        flex: 0 0 25% !important;
+    }
+    
+    .linkedinProfile{
+        .linkedinUrl {
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: .5rem;
+                margin-bottom: .4rem;
+            }
+         }
+    }
+}
+
+.profession-col{
+    
+    @include tablet(){
+        justify-content: flex-end !important;
+    }
+    @include desktop(){
+        
+        font-size: 1rem;
+    }
+    .label-container{
+        text-align: center;
+        @include mobile(){
+          text-align: right;
+        }
+       .label{
+           margin-bottom: 1rem;
+           @include label($primary, $secondary);  
+        }
+        .phone{
+            font-size: 1.5rem;
+            @include mobile(){
+                font-size: 1rem;
+            }
+            @include tablet(){
+                font-size: .9rem;
+            }
+            @include desktop(){
+                font-size: 1rem;
+            }
+           
+        }
+     }
+}
+
+.info-general{
+    margin-top: 1.9rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+    @include mobile() {
+        flex-direction: row;
+    }
+
+    .col{
+        flex: 0 0 100%;
+        position: relative;
+        @include mobile() {
+            flex: 0 0 50%;
+        }
+    }
+
+    .about-me{
+        flex: 0 0 30%;
+
+        p{
+            margin-bottom: 1.5rem;
+        }
+        
+    }
+    .experence{
+        flex: 0 0 65%;
+      
+    }
+}
+
+.heading{
+    font-size: 1.5rem;
+    text-align: left;
+    border-left: 3px solid $secondary;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    h2{
+        font-weight: 100;
+        color: #636363;
+    }
+}
+
+.job{
+    display: flex;
+    background-color: $gray;
+    padding: 1rem;
+    margin-bottom: 1.8rem;
+    border-radius: 8px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    @include mobile(){
+        flex-direction: row;
+        text-align: left;
+    }
+    .col{
+        text-align: center;
+        @include mobile(){
+           
+            text-align: left;
+        }
+    }
+ 
+    .company-info{
+        
+        @include mobile(){
+           
+            display: -webkit-inline-box;
+        }
+        .company-img{
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+          
+            @include mobile(){
+                margin-right: .8rem;
+            }
+        }
+        .company-name{
+            margin-bottom: 1.5rem;
+            @include mobile() {
+                margin-bottom: 0;
+            }
+            h3{
+                color: $secondary;
+                margin-bottom: .5rem;
+            }
+        }
+       
+    }
+    .type-job{
+        margin-top: 1rem;
+        flex: 0 0 100%;
+        @include mobile(){
+            margin-left: 1rem;
+            flex: 0 0 10%;
+        }
+    }
+    .company-description{
+        margin-top: 1rem;
+        flex: 0 0 100%;
+        @include mobile(){
+            flex: 0 0 85%;
+        }
+    }
+    .label{
+       
+        font-size: 11px !important;
+        margin-bottom: .5rem;
+        @include label($primary, $secondary); 
+      
+     }
+}
+
+.skill-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 75%;
+    li{
+        // display: flex;
+        // justify-content: space-between;
+        margin-bottom: 1rem;
+
+        .tech{
+            text-align: right;
+            color: $secondary;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        span{
+            flex: 1 0 50%;
+        }
+    }
+}
+
+.other{
+    display: flex;
+    justify-content: space-between;
+}
+
+@page {
+    
+}
+  
+  @media print {
+    .row{
+        flex-direction: row;
+    }
+    
+}
+
+// Helpers
+.column{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center !important;
+}
+.text-right{
+    text-align: center !important;
+   @include mobile() {
+     text-align: right !important;
+   }
+}
+

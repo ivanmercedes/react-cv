@@ -1,0 +1,37 @@
+
+@mixin label($bg, $text) {
+    background-color: $bg;
+    border: 0 none;
+    color: $text-color;
+    font-weight: 400;
+    border-radius: 8px;
+    padding: .8rem 1.3rem;
+     
+    cursor: pointer; 
+    display: inline-block;
+   
+    @include tablet(){
+        font-size: 11px;
+    }
+    @include desktop(){
+        font-size: 13px;
+    }
+}
+
+
+@mixin mobile{
+    @media only screen and (min-width: #{$mobile}){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media only screen and (min-width: #{$tablet}){
+        @content;
+    }
+}
+@mixin desktop{
+    @media only screen and (min-width: #{$desktop}){
+        @content;
+    }
+}
